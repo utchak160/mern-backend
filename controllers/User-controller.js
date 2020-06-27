@@ -26,7 +26,6 @@ const signup = async (req, res, next) => {
     if (!name || !email || !password || !createdUser) {
         return res.status(422).send({error: 'Please fill out all the credentials'});
     }
-    console.log(createdUser);
     res.status(201).json({message: 'Registered Successfully', user: createdUser});
 };
 

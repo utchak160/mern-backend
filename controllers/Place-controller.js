@@ -51,7 +51,6 @@ const addPlace = async (req, res, next) => {
     if (!user) {
         return res.status(422).send({message: 'Creator is not authenticated'});
     }
-    console.log(user);
     try {
         const sess = await mongoose.startSession();
         sess.startTransaction();
